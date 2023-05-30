@@ -53,9 +53,9 @@ caculate_swap(percent_swap=swap.percent,used_swap=swap.used)
 #print(psutil.disk_partitions())
 #print(psutil.disk_usage('C:\\').used)
 
+print("Status Disk Usage:")
 for part in psutil.disk_partitions(all=False):
     percent_part = psutil.disk_usage(part.mountpoint).percent
-    print("Status Disk Usage")
     print(f"Mountpoint: {part.mountpoint}" , end='\t\t')
     print(f"Percent: {percent_part} %", end='\t\t')
     if percent_part > 90:
